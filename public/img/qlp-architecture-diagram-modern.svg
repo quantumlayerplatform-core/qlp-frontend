@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Quantum Layer Platform: System Architecture</title>
+    <defs>
+        <!-- Gradients -->
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="purpleGradient">
+            <stop stop-color="#7013FA" offset="0%"></stop>
+            <stop stop-color="#9C55FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="tealGradient">
+            <stop stop-color="#05D5C8" offset="0%"></stop>
+            <stop stop-color="#32F4A3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="blueGradient">
+            <stop stop-color="#4A90FF" offset="0%"></stop>
+            <stop stop-color="#74BAFC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="0%" id="grayGradient">
+            <stop stop-color="#2A2A3A" offset="0%"></stop>
+            <stop stop-color="#3A3A4A" offset="100%"></stop>
+        </linearGradient>
+        
+        <!-- Shadows -->
+        <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+        </filter>
+        <filter id="boxShadowLight" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.1"/>
+        </filter>
+    </defs>
+    
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect width="1200" height="800" fill="#1E1E2E" />
+        
+        <!-- Header Title -->
+        <text font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" x="600" y="60" text-anchor="middle">Quantum Layer Platform: System Architecture</text>
+        
+        <!-- User Interaction Layer -->
+        <g transform="translate(0, 100)">
+            <rect x="200" y="0" width="800" height="100" rx="8" fill="#2A2A3A" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" x="600" y="30" text-anchor="middle">User Interaction Layer</text>
+            
+            <!-- User Interaction Components -->
+            <g>
+                <!-- User Circle -->
+                <circle cx="240" cy="65" r="25" fill="url(#blueGradient)" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" x="240" y="70" text-anchor="middle">User</text>
+                
+                <!-- Arrow -->
+                <path d="M270,65 L300,65" stroke="#7A7A8C" stroke-width="2" marker-end="url(#arrowhead)"/>
+                
+                <!-- Web UI -->
+                <rect x="320" y="45" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2A2A3A" x="380" y="70" text-anchor="middle">Web UI</text>
+                
+                <!-- Client SDKs -->
+                <rect x="460" y="45" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2A2A3A" x="520" y="70" text-anchor="middle">Client SDKs</text>
+                
+                <!-- CLI Tool -->
+                <rect x="600" y="45" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2A2A3A" x="660" y="70" text-anchor="middle">CLI Tool</text>
+                
+                <!-- API Integration -->
+                <rect x="740" y="45" width="120" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2A2A3A" x="800" y="70" text-anchor="middle">API Integration</text>
+            </g>
+            
+            <!-- Connection Lines to API Gateway -->
+            <line x1="380" y1="85" x2="380" y2="110" stroke="#7A7A8C" stroke-width="2" stroke-dasharray="4,4"/>
+            <line x1="520" y1="85" x2="520" y2="110" stroke="#7A7A8C" stroke-width="2" stroke-dasharray="4,4"/>
+            <line x1="660" y1="85" x2="660" y2="110" stroke="#7A7A8C" stroke-width="2" stroke-dasharray="4,4"/>
+            <line x1="800" y1="85" x2="800" y2="110" stroke="#7A7A8C" stroke-width="2" stroke-dasharray="4,4"/>
+        </g>
+        
+        <!-- API Gateway -->
+        <g transform="translate(0, 220)">
+            <rect x="200" y="0" width="800" height="70" rx="8" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" x="600" y="40" text-anchor="middle">API Gateway</text>
+        </g>
+        
+        <!-- Core Services Layer -->
+        <g transform="translate(0, 310)">
+            <rect x="200" y="0" width="800" height="120" rx="8" fill="#2A2A3A" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" x="600" y="30" text-anchor="middle">Core Services Layer</text>
+            
+            <!-- Core Services Components -->
+            <g transform="translate(0, 50)">
+                <!-- User Service -->
+                <rect x="230" y="0" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="280" y="25" text-anchor="middle">User Service</text>
+                
+                <!-- Task Scheduler -->
+                <rect x="350" y="0" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="400" y="25" text-anchor="middle">Task Scheduler</text>
+                
+                <!-- Agent Registry -->
+                <rect x="470" y="0" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="520" y="25" text-anchor="middle">Agent Registry</text>
+                
+                <!-- Intent Classifier -->
+                <rect x="590" y="0" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="640" y="25" text-anchor="middle">Intent Classifier</text>
+                
+                <!-- Memory Service -->
+                <rect x="710" y="0" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="760" y="25" text-anchor="middle">Memory Service</text>
+                
+                <!-- Metrics -->
+                <rect x="830" y="0" width="100" height="40" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="880" y="25" text-anchor="middle">Metrics</text>
+            </g>
+            
+            <!-- Connection Lines to Event Infrastructure -->
+            <line x1="280" y1="90" x2="280" y2="130" stroke="#7A7A8C" stroke-width="2" />
+            <line x1="400" y1="90" x2="400" y2="130" stroke="#7A7A8C" stroke-width="2" />
+            <line x1="520" y1="90" x2="520" y2="130" stroke="#7A7A8C" stroke-width="2" />
+            <line x1="640" y1="90" x2="640" y2="130" stroke="#7A7A8C" stroke-width="2" />
+            <line x1="760" y1="90" x2="760" y2="130" stroke="#7A7A8C" stroke-width="2" />
+            <line x1="880" y1="90" x2="880" y2="130" stroke="#7A7A8C" stroke-width="2" />
+        </g>
+        
+        <!-- Event Infrastructure (Kafka) -->
+        <g transform="translate(0, 450)">
+            <rect x="200" y="0" width="800" height="70" rx="8" fill="url(#blueGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" x="600" y="40" text-anchor="middle">Event Infrastructure (Kafka)</text>
+        </g>
+        
+        <!-- Universal Agent Spawning System -->
+        <g transform="translate(0, 540)">
+            <rect x="200" y="0" width="800" height="100" rx="8" fill="#2A2A3A" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" x="600" y="30" text-anchor="middle">Universal Agent Spawning System</text>
+            
+            <!-- Spawning System Components -->
+            <g transform="translate(0, 50)">
+                <!-- Blueprint Generator -->
+                <rect x="230" y="0" width="150" height="30" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="305" y="20" text-anchor="middle">Blueprint Generator</text>
+                
+                <!-- Agent Container -->
+                <rect x="410" y="0" width="150" height="30" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="485" y="20" text-anchor="middle">Agent Container</text>
+                
+                <!-- Resource Manager -->
+                <rect x="590" y="0" width="150" height="30" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="665" y="20" text-anchor="middle">Resource Manager</text>
+                
+                <!-- Security Boundary -->
+                <rect x="770" y="0" width="150" height="30" rx="6" fill="#FFFFFF" stroke="#7A7A8C" stroke-width="1" />
+                <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2A2A3A" x="845" y="20" text-anchor="middle">Security Boundary</text>
+            </g>
+        </g>
+        
+        <!-- Multi-Agent Orchestration -->
+        <g transform="translate(0, 660)">
+            <rect x="200" y="0" width="800" height="70" rx="8" fill="url(#tealGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" x="600" y="40" text-anchor="middle">Multi-Agent Orchestration</text>
+        </g>
+        
+        <!-- Arrow Marker -->
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#7A7A8C" />
+            </marker>
+        </defs>
+        
+        <!-- Connection Lines Between Layers -->
+        <g>
+            <!-- API Gateway to Core Services -->
+            <line x1="600" y1="290" x2="600" y2="310" stroke="#7A7A8C" stroke-width="3" stroke-dasharray="5,5"/>
+            
+            <!-- Event Infrastructure to Universal Agent Spawning -->
+            <line x1="600" y1="520" x2="600" y2="540" stroke="#7A7A8C" stroke-width="3" stroke-dasharray="5,5"/>
+            
+            <!-- Universal Agent Spawning to Multi-Agent Orchestration -->
+            <line x1="600" y1="640" x2="600" y2="660" stroke="#7A7A8C" stroke-width="3" stroke-dasharray="5,5"/>
+        </g>
+    </g>
+</svg>

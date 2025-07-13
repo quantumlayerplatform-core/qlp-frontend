@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="120px" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform Logo</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle fill="#7013fa" cx="60" cy="60" r="40"></circle>
+        <path d="M60,30 C76.5685425,30 90,43.4314575 90,60 C90,76.5685425 76.5685425,90 60,90 C43.4314575,90 30,76.5685425 30,60 C30,43.4314575 43.4314575,30 60,30 Z M60,40 C48.954305,40 40,48.954305 40,60 C40,71.045695 48.954305,80 60,80 C71.045695,80 80,71.045695 80,60 C80,48.954305 71.045695,40 60,40 Z" fill="#c396ff"></path>
+        <circle fill="#FFFFFF" cx="72" cy="48" r="5"></circle>
+        <circle fill="#00e2c3" cx="82" cy="65" r="7"></circle>
+        <circle fill="#FFFFFF" cx="45" cy="70" r="4"></circle>
+    </g>
+</svg>

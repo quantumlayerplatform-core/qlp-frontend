@@ -1,0 +1,108 @@
+/* Glassmorphism Effects and Utilities */
+
+.glass-card {
+  background: rgba(30, 24, 84, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(30, 24, 84, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.glass-panel {
+  background: rgba(19, 16, 58, 0.3);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.glass-button {
+  background: rgba(112, 19, 250, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(112, 19, 250, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-button:hover {
+  background: rgba(112, 19, 250, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(112, 19, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+.glass-input {
+  background: rgba(13, 9, 32, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-input:focus {
+  background: rgba(13, 9, 32, 0.4);
+  border: 1px solid rgba(112, 19, 250, 0.3);
+  box-shadow: 0 0 0 2px rgba(112, 19, 250, 0.15);
+}
+
+/* Orbital animation keyframes */
+@keyframes orbit {
+  from { transform: rotate(var(--start-rotate, 0deg)) translateX(var(--orbit-radius, 100px)) rotate(calc(var(--start-rotate, 0deg) * -1)); }
+  to { transform: rotate(calc(var(--start-rotate, 0deg) + 360deg)) translateX(var(--orbit-radius, 100px)) rotate(calc((var(--start-rotate, 0deg) + 360deg) * -1)); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 10px rgba(112, 19, 250, 0.7);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px rgba(112, 19, 250, 0.3);
+  border: 1px solid rgba(112, 19, 250, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(112, 19, 250, 0.5);
+}
+
+.glow-teal {
+  box-shadow: 0 0 20px rgba(0, 226, 195, 0.5);
+}
+
+/* Animated background gradients */
+.animated-gradient {
+  background: linear-gradient(-45deg, #7013fa, #bd00ff, #13103a, #00e2c3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Star field animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.2); }
+}
+
+.star {
+  animation: twinkle var(--twinkle-duration, 4s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}

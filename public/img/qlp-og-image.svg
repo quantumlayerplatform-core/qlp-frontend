@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform OG Image</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="bgGradient">
+            <stop stop-color="#1E1E2E" offset="0%"></stop>
+            <stop stop-color="#2D2D42" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="logoGradient">
+            <stop stop-color="#7013FA" offset="0%"></stop>
+            <stop stop-color="#AD69FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="accentGradient">
+            <stop stop-color="#00E2C3" offset="0%"></stop>
+            <stop stop-color="#05D5C8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect width="1200" height="630" fill="url(#bgGradient)" />
+        
+        <!-- Abstract Network Pattern -->
+        <g opacity="0.15">
+            <circle cx="300" cy="200" r="3" fill="#FFFFFF" />
+            <circle cx="400" cy="150" r="2" fill="#FFFFFF" />
+            <circle cx="500" cy="250" r="4" fill="#FFFFFF" />
+            <circle cx="600" cy="180" r="3" fill="#FFFFFF" />
+            <circle cx="700" cy="220" r="2" fill="#FFFFFF" />
+            <circle cx="800" cy="170" r="3" fill="#FFFFFF" />
+            <circle cx="900" cy="240" r="2" fill="#FFFFFF" />
+            
+            <circle cx="280" cy="350" r="2" fill="#FFFFFF" />
+            <circle cx="400" cy="400" r="3" fill="#FFFFFF" />
+            <circle cx="500" cy="380" r="2" fill="#FFFFFF" />
+            <circle cx="650" cy="420" r="3" fill="#FFFFFF" />
+            <circle cx="750" cy="370" r="4" fill="#FFFFFF" />
+            <circle cx="880" cy="390" r="2" fill="#FFFFFF" />
+            
+            <path d="M300,200 L400,150 L500,250 L600,180 L700,220 L800,170 L900,240" stroke="#FFFFFF" stroke-width="0.5" />
+            <path d="M280,350 L400,400 L500,380 L650,420 L750,370 L880,390" stroke="#FFFFFF" stroke-width="0.5" />
+            <path d="M300,200 L400,400" stroke="#FFFFFF" stroke-width="0.5" />
+            <path d="M500,250 L500,380" stroke="#FFFFFF" stroke-width="0.5" />
+            <path d="M700,220 L750,370" stroke="#FFFFFF" stroke-width="0.5" />
+            <path d="M900,240 L880,390" stroke="#FFFFFF" stroke-width="0.5" />
+        </g>
+        
+        <!-- Logo (Simplified QL) -->
+        <g transform="translate(100, 240)">
+            <rect x="0" y="0" width="150" height="150" rx="20" fill="url(#logoGradient)" />
+            <text font-family="Arial, sans-serif" font-size="100" font-weight="bold" fill="#FFFFFF" x="75" y="110" text-anchor="middle">QL</text>
+        </g>
+        
+        <!-- Text Content -->
+        <g transform="translate(300, 240)">
+            <text font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#FFFFFF" x="0" y="60">QuantumLayer</text>
+            <text font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="url(#accentGradient)" x="0" y="120">Platform</text>
+            
+            <text font-family="Arial, sans-serif" font-size="24" fill="#FFFFFF" opacity="0.9" x="0" y="180">Orchestrate Intelligence. With Natural Language.</text>
+        </g>
+        
+        <!-- Feature Icons -->
+        <g transform="translate(300, 350)">
+            <!-- Dynamic Agent -->
+            <circle cx="0" cy="0" r="25" fill="url(#logoGradient)" opacity="0.9" />
+            <text font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" x="60" y="5">Dynamic Agent Generation</text>
+            
+            <!-- Neural Memory -->
+            <circle cx="0" cy="80" r="25" fill="url(#logoGradient)" opacity="0.9" />
+            <text font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" x="60" y="85">Neural Memory Persistence</text>
+            
+            <!-- Task Orchestration -->
+            <circle cx="350" cy="0" r="25" fill="url(#logoGradient)" opacity="0.9" />
+            <text font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" x="410" y="5">Task Orchestration</text>
+            
+            <!-- Validation -->
+            <circle cx="350" cy="80" r="25" fill="url(#logoGradient)" opacity="0.9" />
+            <text font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF" x="410" y="85">Validation Framework</text>
+        </g>
+    </g>
+</svg>

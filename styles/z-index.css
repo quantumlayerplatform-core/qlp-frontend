@@ -1,0 +1,86 @@
+/**
+ * Z-index management system
+ * 
+ * This file establishes a clear hierarchy for z-index values
+ * to ensure consistent layering throughout the application.
+ */
+
+:root {
+  /* Base layers */
+  --z-background: -10;
+  --z-background-effects: -5;
+  --z-base: 0;
+  --z-base-content: 5;
+
+  /* Component layers */
+  --z-components-base: 10;
+  --z-cards: 20;
+  --z-diagram-components: 30;
+
+  /* Overlay layers */
+  --z-overlays-base: 100;
+  --z-dropdown: 200;
+  --z-sticky: 300;
+  --z-fixed-elements: 400;
+  --z-modal-background: 500;
+  --z-modal: 600;
+
+  /* Top layers */
+  --z-tooltip: 9000;
+  --z-popover: 9500;
+  --z-header: 9700;
+  --z-toasts: 9800;
+  --z-dev-tools: 9900;
+  --z-max: 9999;
+}
+
+/* Background elements */
+.bg-layer {
+  z-index: var(--z-background) !important;
+}
+
+.bg-effect {
+  z-index: var(--z-background-effects) !important;
+}
+
+/* Content and components */
+.content-layer {
+  z-index: var(--z-base-content) !important;
+}
+
+.card {
+  z-index: var(--z-cards) !important;
+}
+
+/* Fixed positioning elements */
+.fixed-element {
+  z-index: var(--z-fixed-elements) !important;
+}
+
+/* Navigation and header */
+.header {
+  z-index: var(--z-header) !important;
+}
+
+/* Overlays and dialogs */
+.modal-backdrop {
+  z-index: var(--z-modal-background) !important;
+}
+
+.modal {
+  z-index: var(--z-modal) !important;
+}
+
+/* Tooltips and popovers */
+.tooltip {
+  z-index: var(--z-tooltip) !important;
+}
+
+.popover {
+  z-index: var(--z-popover) !important;
+}
+
+/* Highest level elements */
+.top-layer {
+  z-index: var(--z-max) !important;
+}

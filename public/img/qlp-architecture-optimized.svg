@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="650" viewBox="0 0 1000 650" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform: System Architecture</title>
+    <defs>
+        <!-- Gradients -->
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="purpleGradient">
+            <stop stop-color="#7B42FF" offset="0%"></stop>
+            <stop stop-color="#9D66FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="whiteGradient">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F8F8FF" offset="100%"></stop>
+        </linearGradient>
+        
+        <!-- Shadows -->
+        <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.15"/>
+        </filter>
+        
+        <!-- Arrow marker -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#6B39E3" />
+        </marker>
+    </defs>
+    
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- White Background -->
+        <rect width="1000" height="650" fill="#FFFFFF" />
+        
+        <!-- Title -->
+        <text font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2E1A47" x="500" y="60" text-anchor="middle">QuantumLayer Platform: System Architecture</text>
+        
+        <!-- User Interaction Layer -->
+        <g transform="translate(150, 100)">
+            <!-- Layer Container -->
+            <rect x="0" y="0" width="700" height="100" rx="20" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" x="350" y="35" text-anchor="middle">User Interaction Layer</text>
+            
+            <!-- Components -->
+            <g transform="translate(60, 55)">
+                <!-- Client App -->
+                <rect x="0" y="0" width="160" height="35" rx="10" fill="url(#whiteGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" x="80" y="23" text-anchor="middle">Client App</text>
+            </g>
+            
+            <g transform="translate(270, 55)">
+                <!-- Webhook -->
+                <rect x="0" y="0" width="160" height="35" rx="10" fill="url(#whiteGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" x="80" y="23" text-anchor="middle">Webhook</text>
+            </g>
+            
+            <g transform="translate(480, 55)">
+                <!-- SDK Integration -->
+                <rect x="0" y="0" width="160" height="35" rx="10" fill="url(#whiteGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7B42FF" x="55" y="23">SDK</text>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" x="105" y="23">Integration</text>
+            </g>
+        </g>
+        
+        <!-- Arrow to API Gateway -->
+        <g transform="translate(500, 200)">
+            <line x1="0" y1="0" x2="0" y2="20" stroke="#6B39E3" stroke-width="2" marker-end="url(#arrowhead)"/>
+        </g>
+        
+        <!-- API Gateway -->
+        <g transform="translate(150, 230)">
+            <rect x="0" y="0" width="700" height="60" rx="20" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" x="350" y="38" text-anchor="middle">API Gateway</text>
+        </g>
+        
+        <!-- Core Services -->
+        <g transform="translate(100, 310)">
+            <!-- Core Services Container -->
+            <rect x="0" y="0" width="800" height="120" rx="20" fill="#FFFFFF" stroke="#6B39E3" stroke-width="2" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2E1A47" x="400" y="35" text-anchor="middle">Core Services</text>
+            
+            <!-- Services -->
+            <g transform="translate(40, 65)">
+                <!-- Userice -->
+                <rect x="0" y="0" width="110" height="40" rx="10" fill="url(#purpleGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" x="55" y="26" text-anchor="middle">Userice</text>
+            </g>
+            
+            <g transform="translate(170, 65)">
+                <!-- Task Scheduler -->
+                <rect x="0" y="0" width="110" height="40" rx="10" fill="url(#purpleGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="26" text-anchor="middle">Task Scheduler</text>
+            </g>
+            
+            <g transform="translate(300, 65)">
+                <!-- Memory Service -->
+                <rect x="0" y="0" width="110" height="40" rx="10" fill="url(#purpleGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="19" text-anchor="middle">Memory</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="33" text-anchor="middle">Service</text>
+            </g>
+            
+            <g transform="translate(430, 65)">
+                <!-- Intent Classifier -->
+                <rect x="0" y="0" width="110" height="40" rx="10" fill="url(#purpleGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="19" text-anchor="middle">Intent</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="33" text-anchor="middle">Classifier</text>
+            </g>
+            
+            <g transform="translate(560, 65)">
+                <!-- Agent Registry -->
+                <rect x="0" y="0" width="110" height="40" rx="10" fill="url(#purpleGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="19" text-anchor="middle">Agent</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="33" text-anchor="middle">Registry</text>
+            </g>
+            
+            <g transform="translate(690, 65)">
+                <!-- Security Boundary -->
+                <rect x="0" y="0" width="110" height="40" rx="10" fill="url(#purpleGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="19" text-anchor="middle">Security</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="55" y="33" text-anchor="middle">Boundary</text>
+            </g>
+        </g>
+        
+        <!-- Arrow to Event Infrastructure -->
+        <g transform="translate(500, 430)">
+            <line x1="0" y1="0" x2="0" y2="20" stroke="#6B39E3" stroke-width="2" marker-end="url(#arrowhead)"/>
+        </g>
+        
+        <!-- Event Infrastructure & Spawning System -->
+        <g transform="translate(150, 460)">
+            <!-- Layer Container -->
+            <rect x="0" y="0" width="700" height="100" rx="20" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" x="350" y="35" text-anchor="middle">Event Infrastructure & Spawning System</text>
+            
+            <!-- Components -->
+            <g transform="translate(60, 60)">
+                <!-- Event Streaming -->
+                <rect x="0" y="0" width="160" height="30" rx="10" fill="url(#whiteGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" x="80" y="20" text-anchor="middle">Event Streaming</text>
+            </g>
+            
+            <g transform="translate(270, 60)">
+                <!-- Agent Container -->
+                <rect x="0" y="0" width="160" height="30" rx="10" fill="url(#whiteGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" x="80" y="20" text-anchor="middle">Agent Container</text>
+            </g>
+            
+            <g transform="translate(480, 60)">
+                <!-- Security Boundary -->
+                <rect x="0" y="0" width="160" height="30" rx="10" fill="url(#whiteGradient)"/>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333333" x="80" y="20" text-anchor="middle">Security Boundary</text>
+            </g>
+        </g>
+        
+        <!-- Arrow to Multi-Agent Orchestration -->
+        <g transform="translate(500, 560)">
+            <line x1="0" y1="0" x2="0" y2="20" stroke="#6B39E3" stroke-width="2" marker-end="url(#arrowhead)"/>
+        </g>
+        
+        <!-- Multi-Agent Orchestration -->
+        <g transform="translate(325, 580)">
+            <rect x="0" y="0" width="350" height="50" rx="20" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" x="175" y="33" text-anchor="middle">Multi-Agent Orchestration</text>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,119 @@
+/* Architecture Diagram Specific Styles */
+
+/* Connection animation */
+.connection-line {
+  animation: pulse-subtle 2s infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Tooltip animation */
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, calc(-100% - 10px)); }
+  to { opacity: 1; transform: translate(-50%, -100%); }
+}
+
+/* Tooltip arrow */
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #1e1854;
+}
+
+/* Accessibility focus styles */
+.keyboard-focus:focus {
+  outline: 2px solid #7013fa;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(112, 19, 250, 0.3);
+}
+
+.keyboard-focus-container:focus-within {
+  outline: 2px solid #7013fa;
+  outline-offset: 4px;
+}
+
+/* Mobile touch device optimizations */
+@media (max-width: 768px) {
+  .diagram-component {
+    min-height: 50px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  
+  .connection-line {
+    width: 2px; /* Thicker lines on mobile */
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .connection-line {
+    background: CanvasText;
+  }
+  
+  .keyboard-focus:focus {
+    outline: 3px solid Highlight;
+  }
+}
+
+/* Data flow animation */
+@keyframes flow {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.data-flow-indicator {
+  animation: flow 3s infinite;
+}
+
+/* Primary component highlighting */
+.primary-component {
+  box-shadow: 0 0 20px rgba(112, 19, 250, 0.5);
+  border: 1px solid rgba(112, 19, 250, 0.4);
+  z-index: 20;
+}
+
+/* Interaction states */
+.component-hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(112, 19, 250, 0.3);
+}
+
+.component-active {
+  background: linear-gradient(135deg, rgba(112, 19, 250, 0.8), rgba(189, 0, 255, 0.8));
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .architecture-container {
+    transform: scale(0.9);
+    margin-top: -5%;
+    margin-bottom: -5%;
+  }
+  
+  .tooltip {
+    max-width: 80vw;
+  }
+}

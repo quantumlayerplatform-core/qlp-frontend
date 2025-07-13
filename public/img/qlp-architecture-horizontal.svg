@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform: System Architecture</title>
+    <defs>
+        <!-- Gradients -->
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="purpleGradient">
+            <stop stop-color="#7B42FF" offset="0%"></stop>
+            <stop stop-color="#9D66FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="whiteGradient">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F8F8FF" offset="100%"></stop>
+        </linearGradient>
+        
+        <!-- Shadows -->
+        <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.15"/>
+        </filter>
+        <filter id="boxShadowSmall" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.12"/>
+        </filter>
+        
+        <!-- Arrow marker -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#6B39E3" />
+        </marker>
+    </defs>
+    
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- White Background -->
+        <rect width="1200" height="800" fill="#FFFFFF" />
+        
+        <!-- Title -->
+        <text font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#2E1A47" x="600" y="80" text-anchor="middle">QuantumLayer Platform: System Architecture</text>
+        
+        <!-- User Interaction Layer -->
+        <g transform="translate(200, 150)">
+            <!-- Layer Container -->
+            <rect x="0" y="0" width="800" height="120" rx="25" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" x="400" y="40" text-anchor="middle">User Interaction Layer</text>
+            
+            <!-- Components -->
+            <g transform="translate(50, 60)">
+                <!-- Client App -->
+                <rect x="0" y="0" width="200" height="50" rx="15" fill="url(#whiteGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(30, 25)">
+                    <rect x="-10" y="-10" width="20" height="15" rx="2" fill="#7B42FF"/>
+                    <rect x="-7" y="7" width="15" height="3" rx="1" fill="#7B42FF"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" x="100" y="30" text-anchor="middle">Client App</text>
+            </g>
+            
+            <g transform="translate(300, 60)">
+                <!-- Webhook -->
+                <rect x="0" y="0" width="200" height="50" rx="15" fill="url(#whiteGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(30, 25)">
+                    <circle cx="-5" cy="-5" r="7" fill="#7B42FF"/>
+                    <circle cx="5" cy="-5" r="7" fill="#7B42FF"/>
+                    <circle cx="0" cy="7" r="7" fill="#7B42FF"/>
+                    <line x1="-5" y1="-5" x2="5" y2="-5" stroke="#7B42FF" stroke-width="2"/>
+                    <line x1="-5" y1="-5" x2="0" y2="7" stroke="#7B42FF" stroke-width="2"/>
+                    <line x1="5" y1="-5" x2="0" y2="7" stroke="#7B42FF" stroke-width="2"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" x="100" y="30" text-anchor="middle">Webhook</text>
+            </g>
+            
+            <g transform="translate(550, 60)">
+                <!-- SDK Integration -->
+                <rect x="0" y="0" width="200" height="50" rx="15" fill="url(#whiteGradient)" filter="url(#boxShadowSmall)"/>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7B42FF" x="65" y="30">SDK</text>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" x="125" y="30">Integration</text>
+            </g>
+        </g>
+        
+        <!-- Arrow to API Gateway -->
+        <g transform="translate(600, 270)">
+            <line x1="0" y1="0" x2="0" y2="30" stroke="#6B39E3" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+        </g>
+        
+        <!-- API Gateway -->
+        <g transform="translate(200, 320)">
+            <rect x="0" y="0" width="800" height="80" rx="25" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" x="400" y="50" text-anchor="middle">API Gateway</text>
+        </g>
+        
+        <!-- Core Services -->
+        <g transform="translate(150, 420)">
+            <!-- Core Services Container -->
+            <rect x="0" y="0" width="900" height="140" rx="25" fill="#FFFFFF" stroke="#6B39E3" stroke-width="3" filter="url(#boxShadowSmall)"/>
+            <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2E1A47" x="450" y="40" text-anchor="middle">Core Services</text>
+            
+            <!-- Services -->
+            <g transform="translate(50, 75)">
+                <!-- Userice -->
+                <rect x="0" y="0" width="120" height="50" rx="15" fill="url(#purpleGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(25, 25)">
+                    <circle cx="0" cy="-10" r="7" fill="#FFFFFF"/>
+                    <rect x="-7" y="0" width="14" height="12" rx="3" fill="#FFFFFF"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" x="60" y="32" text-anchor="middle">Userice</text>
+            </g>
+            
+            <g transform="translate(190, 75)">
+                <!-- Task Scheduler -->
+                <rect x="0" y="0" width="120" height="50" rx="15" fill="url(#purpleGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(25, 25)">
+                    <circle cx="0" cy="0" r="10" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+                    <line x1="0" y1="-5" x2="0" y2="0" stroke="#FFFFFF" stroke-width="2"/>
+                    <line x1="0" y1="0" x2="5" y2="0" stroke="#FFFFFF" stroke-width="2"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="75" y="24" text-anchor="middle">Task</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="75" y="40" text-anchor="middle">Scheduler</text>
+            </g>
+            
+            <g transform="translate(330, 75)">
+                <!-- Memory Service -->
+                <rect x="0" y="0" width="120" height="50" rx="15" fill="url(#purpleGradient)" filter="url(#boxShadowSmall)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="60" y="24" text-anchor="middle">Memory</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="60" y="40" text-anchor="middle">Service</text>
+            </g>
+            
+            <g transform="translate(470, 75)">
+                <!-- Intent Classifier -->
+                <rect x="0" y="0" width="120" height="50" rx="15" fill="url(#purpleGradient)" filter="url(#boxShadowSmall)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="60" y="24" text-anchor="middle">Intent</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="60" y="40" text-anchor="middle">Classifier</text>
+            </g>
+            
+            <g transform="translate(610, 75)">
+                <!-- Agent Registry -->
+                <rect x="0" y="0" width="120" height="50" rx="15" fill="url(#purpleGradient)" filter="url(#boxShadowSmall)"/>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="60" y="24" text-anchor="middle">Agent</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="60" y="40" text-anchor="middle">Registry</text>
+            </g>
+            
+            <g transform="translate(750, 75)">
+                <!-- Security Boundary -->
+                <rect x="0" y="0" width="120" height="50" rx="15" fill="url(#purpleGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(25, 25)">
+                    <path d="M0,-7 L7,0 L0,7 L-7,0 Z" fill="#FFFFFF"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="75" y="24" text-anchor="middle">Securi-</text>
+                <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="75" y="40" text-anchor="middle">bundar</text>
+            </g>
+        </g>
+        
+        <!-- Arrow to Event Infrastructure -->
+        <g transform="translate(600, 560)">
+            <line x1="0" y1="0" x2="0" y2="30" stroke="#6B39E3" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+        </g>
+        
+        <!-- Event Infrastructure & Spawning System -->
+        <g transform="translate(200, 610)">
+            <!-- Layer Container -->
+            <rect x="0" y="0" width="800" height="120" rx="25" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" x="400" y="40" text-anchor="middle">Event Infrastructure & Spawning System</text>
+            
+            <!-- Components -->
+            <g transform="translate(50, 65)">
+                <!-- Event Streaming -->
+                <rect x="0" y="0" width="200" height="45" rx="15" fill="url(#whiteGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(30, 22)">
+                    <path d="M-10,0 C-7,-7 7,-7 10,0 M-8,-5 C-5,-12 5,-12 8,-5 M-6,5 C-3,-2 3,-2 6,5" stroke="#7B42FF" stroke-width="2" fill="none"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" x="115" y="30" text-anchor="middle">Event Streaming</text>
+            </g>
+            
+            <g transform="translate(300, 65)">
+                <!-- Agent Container -->
+                <rect x="0" y="0" width="200" height="45" rx="15" fill="url(#whiteGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(30, 22)">
+                    <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#7B42FF"/>
+                    <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#FFFFFF"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" x="115" y="30" text-anchor="middle">Agent Container</text>
+            </g>
+            
+            <g transform="translate(550, 65)">
+                <!-- Security Boundary -->
+                <rect x="0" y="0" width="200" height="45" rx="15" fill="url(#whiteGradient)" filter="url(#boxShadowSmall)"/>
+                <g transform="translate(30, 22)">
+                    <path d="M0,-10 L8,0 L0,10 L-8,0 Z" fill="#7B42FF"/>
+                    <circle cx="0" cy="0" r="4" fill="#FFFFFF"/>
+                </g>
+                <text font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333333" x="115" y="30" text-anchor="middle">Security Boundary</text>
+            </g>
+        </g>
+        
+        <!-- Arrow to Multi-Agent Orchestration -->
+        <g transform="translate(600, 730)">
+            <line x1="0" y1="0" x2="0" y2="20" stroke="#6B39E3" stroke-width="2.5" marker-end="url(#arrowhead)"/>
+        </g>
+        
+        <!-- Multi-Agent Orchestration -->
+        <g transform="translate(375, 750)">
+            <rect x="0" y="0" width="450" height="60" rx="25" fill="url(#purpleGradient)" filter="url(#boxShadow)"/>
+            <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" x="225" y="38" text-anchor="middle">Multi-Agent Orchestration</text>
+        </g>
+    </g>
+</svg>

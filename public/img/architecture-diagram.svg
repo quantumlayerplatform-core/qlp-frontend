@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="500px" viewBox="0 0 800 500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform Architecture Diagram</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#7013fa" offset="0%"></stop>
+            <stop stop-color="#c396ff" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#00e2c3" offset="0%"></stop>
+            <stop stop-color="#00c1e2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Title -->
+        <text font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#212121" x="250" y="40">
+            QuantumLayer Platform Architecture
+        </text>
+        
+        <!-- API Gateway -->
+        <rect fill="url(#linearGradient-1)" x="350" y="80" width="100" height="60" rx="10"></rect>
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="360" y="115">
+            API Gateway
+        </text>
+        
+        <!-- Core Services Layer -->
+        <rect fill="#F5F5F5" x="100" y="180" width="600" height="140" rx="10" stroke="#CCCCCC" stroke-width="1"></rect>
+        <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#212121" x="330" y="200">
+            Core Services
+        </text>
+        
+        <!-- Task Scheduler -->
+        <rect fill="url(#linearGradient-1)" x="150" y="230" width="120" height="60" rx="8"></rect>
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="160" y="265">
+            Task Scheduler
+        </text>
+        
+        <!-- Agent Registry -->
+        <rect fill="url(#linearGradient-1)" x="340" y="230" width="120" height="60" rx="8"></rect>
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="350" y="265">
+            Agent Registry
+        </text>
+        
+        <!-- User Service -->
+        <rect fill="url(#linearGradient-1)" x="530" y="230" width="120" height="60" rx="8"></rect>
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="545" y="265">
+            User Service
+        </text>
+        
+        <!-- Agent Layer -->
+        <rect fill="#F5F5F5" x="100" y="360" width="600" height="100" rx="10" stroke="#CCCCCC" stroke-width="1"></rect>
+        <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#212121" x="330" y="380">
+            Agent Layer
+        </text>
+        
+        <!-- Agent 1 -->
+        <circle fill="url(#linearGradient-2)" cx="200" cy="420" r="30"></circle>
+        <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" x="184" y="425">
+            Agent 1
+        </text>
+        
+        <!-- Agent 2 -->
+        <circle fill="url(#linearGradient-2)" cx="300" cy="420" r="30"></circle>
+        <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" x="284" y="425">
+            Agent 2
+        </text>
+        
+        <!-- Agent 3 -->
+        <circle fill="url(#linearGradient-2)" cx="400" cy="420" r="30"></circle>
+        <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" x="384" y="425">
+            Agent 3
+        </text>
+        
+        <!-- Agent 4 -->
+        <circle fill="url(#linearGradient-2)" cx="500" cy="420" r="30"></circle>
+        <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" x="484" y="425">
+            Agent 4
+        </text>
+        
+        <!-- Agent 5 -->
+        <circle fill="url(#linearGradient-2)" cx="600" cy="420" r="30"></circle>
+        <text font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" x="584" y="425">
+            Agent 5
+        </text>
+        
+        <!-- Connections -->
+        <line x1="400" y1="140" x2="210" y2="230" stroke="#7013fa" stroke-width="2" stroke-dasharray="5,5"></line>
+        <line x1="400" y1="140" x2="400" y2="230" stroke="#7013fa" stroke-width="2" stroke-dasharray="5,5"></line>
+        <line x1="400" y1="140" x2="590" y2="230" stroke="#7013fa" stroke-width="2" stroke-dasharray="5,5"></line>
+        
+        <line x1="210" y1="290" x2="210" y2="360" stroke="#7013fa" stroke-width="2"></line>
+        <line x1="400" y1="290" x2="400" y2="360" stroke="#7013fa" stroke-width="2"></line>
+        <line x1="590" y1="290" x2="590" y2="360" stroke="#7013fa" stroke-width="2"></line>
+        
+        <!-- Data flow animations -->
+        <circle fill="#FFFFFF" cx="400" cy="150" r="3">
+            <animateMotion path="M0,0 L-190,80" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle fill="#FFFFFF" cx="400" cy="150" r="3">
+            <animateMotion path="M0,0 L0,80" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle fill="#FFFFFF" cx="400" cy="150" r="3">
+            <animateMotion path="M0,0 L190,80" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle fill="#FFFFFF" cx="210" cy="300" r="3">
+            <animateMotion path="M0,0 L0,60" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle fill="#FFFFFF" cx="400" cy="300" r="3">
+            <animateMotion path="M0,0 L0,60" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle fill="#FFFFFF" cx="590" cy="300" r="3">
+            <animateMotion path="M0,0 L0,60" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+</svg>

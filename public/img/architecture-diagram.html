@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantumLayer Architecture</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0c0920;
+      color: white;
+      font-family: sans-serif;
+    }
+    .container {
+      width: 900px;
+      height: 600px;
+      position: relative;
+      margin: 0 auto;
+    }
+    .box {
+      background-color: #13103a;
+      border: 1px solid rgba(112, 19, 250, 0.5);
+      border-radius: 10px;
+      padding: 10px;
+      margin: 15px;
+      position: absolute;
+      text-align: center;
+    }
+    .box h3 {
+      margin: 5px 0;
+      font-size: 18px;
+    }
+    .box.user-layer {
+      top: 20px;
+      left: 150px;
+      width: 600px;
+      height: 70px;
+    }
+    .box.api-layer {
+      top: 110px;
+      left: 150px;
+      width: 600px;
+      height: 50px;
+    }
+    .box.core-layer {
+      top: 180px;
+      left: 50px;
+      width: 800px;
+      height: 180px;
+    }
+    .box.event-layer {
+      top: 380px;
+      left: 150px;
+      width: 600px;
+      height: 50px;
+    }
+    .box.agent-layer {
+      top: 450px;
+      left: 250px;
+      width: 400px;
+      height: 50px;
+    }
+    .node {
+      background: linear-gradient(135deg, #7013fa, #bd00ff);
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(112, 19, 250, 0.5);
+    }
+    .line {
+      position: absolute;
+      background-color: #00e2c3;
+      height: 2px;
+    }
+    .service-name {
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Main layers -->
+    <div class="box user-layer">
+      <h3>User Interaction Layer</h3>
+    </div>
+    <div class="box api-layer">
+      <h3>API Gateway</h3>
+    </div>
+    <div class="box core-layer">
+      <h3>Core Services</h3>
+      <div class="node" style="left: 100px; top: 80px;">Intent Classifier</div>
+      <div class="node" style="left: 250px; top: 80px;">Agent Registry</div>
+      <div class="node" style="left: 400px; top: 80px;">Task Orchestrator</div>
+      <div class="node" style="left: 550px; top: 80px;">Neural Memory</div>
+      <div class="node" style="left: 700px; top: 80px;">Validation</div>
+    </div>
+    <div class="box event-layer">
+      <h3>Event Infrastructure & Reasoning System</h3>
+    </div>
+    <div class="box agent-layer">
+      <h3>Multi-Agent Orchestration</h3>
+    </div>
+    
+    <!-- Connecting lines -->
+    <div class="line" style="top: 90px; left: 450px; width: 2px; height: 20px; transform: rotate(90deg);"></div>
+    <div class="line" style="top: 160px; left: 450px; width: 2px; height: 20px; transform: rotate(90deg);"></div>
+    <div class="line" style="top: 320px; left: 450px; width: 2px; height: 60px; transform: rotate(90deg);"></div>
+    <div class="line" style="top: 430px; left: 450px; width: 2px; height: 20px; transform: rotate(90deg);"></div>
+  </div>
+</body>
+</html>

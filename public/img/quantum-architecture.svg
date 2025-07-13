@@ -1,0 +1,147 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7013fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bd00ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00e2c3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00c1e2;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feFlood flood-color="#000" flood-opacity="0.2" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="shadow"/>
+      <feComposite in="shadow" in2="SourceGraphic" operator="over"/>
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feFlood flood-color="#7013fa" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feComposite in="glow" in2="SourceGraphic" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background pattern -->
+  <rect width="900" height="600" fill="#0c0920" />
+  <g opacity="0.1">
+    <circle cx="100" cy="100" r="80" fill="#7013fa" filter="blur(40px)" />
+    <circle cx="800" cy="500" r="120" fill="#00e2c3" filter="blur(60px)" />
+    <circle cx="450" cy="300" r="200" fill="#7013fa" opacity="0.05" filter="blur(100px)" />
+  </g>
+  
+  <!-- User Interaction Layer -->
+  <g transform="translate(450, 100)" filter="url(#shadow)">
+    <rect x="-175" y="-40" width="350" height="80" rx="10" fill="#13103a" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="0" y="-10" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">User Interaction Layer</text>
+    <rect x="-150" y="5" width="80" height="30" rx="5" fill="#1e1854" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="-110" y="25" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Client App</text>
+    <rect x="-50" y="5" width="100" height="30" rx="5" fill="#1e1854" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="0" y="25" font-family="Arial" font-size="12" fill="white" text-anchor="middle">Webhooks</text>
+    <rect x="70" y="5" width="80" height="30" rx="5" fill="#1e1854" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="110" y="25" font-family="Arial" font-size="12" fill="white" text-anchor="middle">SDK Integration</text>
+  </g>
+  
+  <!-- API Gateway -->
+  <g transform="translate(450, 180)" filter="url(#shadow)">
+    <rect x="-175" y="-25" width="350" height="50" rx="10" fill="#13103a" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="0" y="5" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">API Gateway</text>
+  </g>
+  
+  <!-- Core Services -->
+  <g transform="translate(450, 300)" filter="url(#shadow)">
+    <rect x="-300" y="-70" width="600" height="140" rx="10" fill="#13103a" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="0" y="-40" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Core Services</text>
+    
+    <!-- Intent Classifier -->
+    <g transform="translate(-225, 10)">
+      <circle cx="0" cy="0" r="25" fill="url(#grad1)" filter="url(#glow)" />
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Intent Classifier</text>
+    </g>
+    
+    <!-- Agent Registry -->
+    <g transform="translate(-75, 10)">
+      <circle cx="0" cy="0" r="25" fill="url(#grad1)" filter="url(#glow)" />
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Agent Registry</text>
+    </g>
+    
+    <!-- Task Orchestrator -->
+    <g transform="translate(75, 10)">
+      <circle cx="0" cy="0" r="25" fill="url(#grad1)" filter="url(#glow)" />
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Task Orchestrator</text>
+    </g>
+    
+    <!-- Neural Memory -->
+    <g transform="translate(225, 10)">
+      <circle cx="0" cy="0" r="25" fill="url(#grad1)" filter="url(#glow)" />
+      <text x="0" y="50" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Neural Memory</text>
+    </g>
+  </g>
+  
+  <!-- Event Infrastructure -->
+  <g transform="translate(450, 430)" filter="url(#shadow)">
+    <rect x="-300" y="-25" width="600" height="50" rx="10" fill="#13103a" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="0" y="5" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">Event Infrastructure & Reasoning System</text>
+  </g>
+  
+  <!-- Agent Container -->
+  <g transform="translate(450, 500)" filter="url(#shadow)">
+    <rect x="-300" y="-25" width="600" height="50" rx="10" fill="#13103a" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    <text x="-170" y="5" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Event Streaming</text>
+    <text x="0" y="5" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Agent Container</text>
+    <text x="170" y="5" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Security Boundary</text>
+  </g>
+  
+  <!-- Connecting Lines -->
+  <g stroke-width="2" stroke-dasharray="5,5">
+    <!-- User to API -->
+    <line x1="450" y1="140" x2="450" y2="155" stroke="url(#grad2)" />
+    <!-- API to Core -->
+    <line x1="450" y1="205" x2="450" y2="230" stroke="url(#grad2)" />
+    <!-- Core to Event -->
+    <line x1="450" y1="370" x2="450" y2="405" stroke="url(#grad2)" />
+    <!-- Event to Agent -->
+    <line x1="450" y1="455" x2="450" y2="475" stroke="url(#grad2)" />
+  </g>
+  
+  <!-- Connecting lines between core components -->
+  <g stroke="url(#grad2)" stroke-width="2" opacity="0.7">
+    <path d="M 225 310 Q 300 250, 375 310" fill="none" />
+    <path d="M 375 310 Q 450 250, 525 310" fill="none" />
+    <path d="M 525 310 Q 600 250, 675 310" fill="none" />
+  </g>
+  
+  <!-- Data Flow Animations -->
+  <g>
+    <circle cx="450" cy="150" r="3" fill="#00e2c3">
+      <animate attributeName="cy" from="150" to="205" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="205" r="3" fill="#00e2c3">
+      <animate attributeName="cy" from="205" to="300" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="350" r="3" fill="#00e2c3">
+      <animate attributeName="cy" from="350" to="430" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="430" r="3" fill="#00e2c3">
+      <animate attributeName="cy" from="430" to="500" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Orbiting data points -->
+    <circle cx="0" cy="0" r="4" fill="#00e2c3">
+      <animateMotion path="M 225 310 Q 300 250, 375 310" dur="6s" repeatCount="indefinite" rotate="auto" />
+      <animate attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="4" fill="#00e2c3">
+      <animateMotion path="M 375 310 Q 450 250, 525 310" dur="6s" repeatCount="indefinite" rotate="auto" />
+      <animate attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="4" fill="#00e2c3">
+      <animateMotion path="M 525 310 Q 600 250, 675 310" dur="6s" repeatCount="indefinite" rotate="auto" />
+      <animate attributeName="opacity" from="1" to="0" dur="6s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

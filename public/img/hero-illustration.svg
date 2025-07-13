@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600px" height="400px" viewBox="0 0 600 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform Hero Illustration</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#7013fa" offset="0%"></stop>
+            <stop stop-color="#c396ff" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#00e2c3" offset="0%"></stop>
+            <stop stop-color="#00c1e2" offset="100%"></stop>
+        </linearGradient>
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+            <feOffset dx="0" dy="5" result="offsetblur"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge> 
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/> 
+            </feMerge>
+        </filter>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="10" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Glowing background elements -->
+        <path d="M50,300 C150,250 250,350 350,200 C450,50 550,150 600,100" stroke="url(#linearGradient-1)" stroke-width="4" opacity="0.5" filter="url(#glow)"></path>
+        <path d="M0,200 C100,150 200,250 300,100 C400,0 500,100 600,50" stroke="url(#linearGradient-2)" stroke-width="4" opacity="0.5" filter="url(#glow)"></path>
+        
+        <!-- Grid background -->
+        <path d="M0,0 L600,0 L600,400 L0,400 Z" fill="url(#grid-pattern)" opacity="0.05"></path>
+        <pattern id="grid-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0,0 L0,20 M0,0 L20,0" stroke="#7013fa" stroke-width="0.5" opacity="0.2"></path>
+        </pattern>
+        
+        <!-- Decorative circles -->
+        <circle cx="50" cy="50" r="100" fill="url(#linearGradient-1)" opacity="0.03"></circle>
+        <circle cx="500" cy="350" r="150" fill="url(#linearGradient-2)" opacity="0.03"></circle>
+        <circle cx="300" cy="100" r="80" fill="url(#linearGradient-1)" opacity="0.03"></circle>
+        
+        <!-- Main network nodes with gradients and glow -->
+        <circle fill="url(#linearGradient-1)" cx="150" cy="150" r="25" filter="url(#shadow)"></circle>
+        <circle fill="url(#linearGradient-2)" cx="300" cy="200" r="35" filter="url(#shadow)"></circle>
+        <circle fill="url(#linearGradient-1)" cx="450" cy="150" r="30" filter="url(#shadow)"></circle>
+        <circle fill="url(#linearGradient-1)" cx="200" cy="300" r="20" filter="url(#shadow)"></circle>
+        <circle fill="url(#linearGradient-2)" cx="400" cy="250" r="15" filter="url(#shadow)"></circle>
+        
+        <!-- Connection lines with glowing effect -->
+        <line x1="150" y1="150" x2="300" y2="200" stroke="url(#linearGradient-1)" stroke-width="3" opacity="0.7"></line>
+        <line x1="300" y1="200" x2="450" y2="150" stroke="url(#linearGradient-2)" stroke-width="3" opacity="0.7"></line>
+        <line x1="300" y1="200" x2="200" y2="300" stroke="url(#linearGradient-1)" stroke-width="3" opacity="0.7"></line>
+        <line x1="450" y1="150" x2="400" y2="250" stroke="url(#linearGradient-2)" stroke-width="3" opacity="0.7"></line>
+        
+        <!-- Decorative elements with glows -->
+        <circle fill="#FFFFFF" cx="150" cy="150" r="10" filter="url(#glow)"></circle>
+        <circle fill="#FFFFFF" cx="300" cy="200" r="15" filter="url(#glow)"></circle>
+        <circle fill="#FFFFFF" cx="450" cy="150" r="12" filter="url(#glow)"></circle>
+        <circle fill="#FFFFFF" cx="200" cy="300" r="8" filter="url(#glow)"></circle>
+        <circle fill="#FFFFFF" cx="400" cy="250" r="6" filter="url(#glow)"></circle>
+        
+        <!-- Small nodes -->
+        <circle fill="url(#linearGradient-1)" cx="100" cy="200" r="8"></circle>
+        <circle fill="url(#linearGradient-2)" cx="250" cy="120" r="10"></circle>
+        <circle fill="url(#linearGradient-1)" cx="350" cy="300" r="12"></circle>
+        <circle fill="url(#linearGradient-2)" cx="480" cy="220" r="7"></circle>
+        
+        <!-- Small connection lines with pulse animation -->
+        <line x1="150" y1="150" x2="100" y2="200" stroke="url(#linearGradient-1)" stroke-width="2" opacity="0.5">
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3s" repeatCount="indefinite" />
+        </line>
+        <line x1="300" y1="200" x2="250" y2="120" stroke="url(#linearGradient-2)" stroke-width="2" opacity="0.5">
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite" />
+        </line>
+        <line x1="200" y1="300" x2="350" y2="300" stroke="url(#linearGradient-1)" stroke-width="2" opacity="0.5">
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.5s" repeatCount="indefinite" />
+        </line>
+        <line x1="450" y1="150" x2="480" y2="220" stroke="url(#linearGradient-2)" stroke-width="2" opacity="0.5">
+            <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite" />
+        </line>
+        
+        <!-- Data flow animations with glowing particles -->
+        <circle fill="#FFFFFF" cx="180" cy="165" r="4" filter="url(#glow)">
+            <animateMotion path="M0,0 L120,50" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle fill="#FFFFFF" cx="330" cy="185" r="4" filter="url(#glow)">
+            <animateMotion path="M0,0 L150,-50" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle fill="#FFFFFF" cx="270" cy="230" r="4" filter="url(#glow)">
+            <animateMotion path="M0,0 L-70,70" dur="2.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="2.5s" repeatCount="indefinite" />
+        </circle>
+        <circle fill="#FFFFFF" cx="440" cy="180" r="4" filter="url(#glow)">
+            <animateMotion path="M0,0 L-40,70" dur="3.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.2;1;0.2" dur="3.5s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Additional flowing data particles -->
+        <circle fill="#FFFFFF" cx="200" cy="175" r="3" filter="url(#glow)">
+            <animateMotion path="M0,0 L100,25 L200,-25" dur="5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="5s" repeatCount="indefinite" />
+        </circle>
+        <circle fill="#FFFFFF" cx="350" cy="225" r="3" filter="url(#glow)">
+            <animateMotion path="M0,0 L-50,50 L-100,25" dur="4.5s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0;1;0" dur="4.5s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Subtle pulsing rings around main nodes -->
+        <circle cx="300" cy="200" r="35" stroke="url(#linearGradient-2)" stroke-width="2" fill="none" opacity="0">
+            <animate attributeName="r" values="35;60;35" dur="5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0;0.3;0" dur="5s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="150" cy="150" r="25" stroke="url(#linearGradient-1)" stroke-width="2" fill="none" opacity="0">
+            <animate attributeName="r" values="25;45;25" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0;0.3;0" dur="4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="450" cy="150" r="30" stroke="url(#linearGradient-1)" stroke-width="2" fill="none" opacity="0">
+            <animate attributeName="r" values="30;50;30" dur="6s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0;0.3;0" dur="6s" repeatCount="indefinite" />
+        </circle>
+    </g>
+</svg>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000px" height="600px" viewBox="0 0 1000 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>QuantumLayer Platform Architecture - Enhanced</title>
+    <defs>
+        <!-- Gradients -->
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="quantumPurpleGradient">
+            <stop stop-color="#7013FA" offset="0%"></stop>
+            <stop stop-color="#AD69FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="quantumTealGradient">
+            <stop stop-color="#05D5C8" offset="0%"></stop>
+            <stop stop-color="#32F4A3" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="quantumBlueGradient">
+            <stop stop-color="#4A90FF" offset="0%"></stop>
+            <stop stop-color="#74BAFC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="quantumRedGradient">
+            <stop stop-color="#FF5757" offset="0%"></stop>
+            <stop stop-color="#FF8C8C" offset="100%"></stop>
+        </linearGradient>
+        
+        <!-- Glass Effect -->
+        <filter id="glass" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glass"/>
+            <feComposite in="SourceGraphic" in2="glass" operator="atop" result="composite"/>
+        </filter>
+        
+        <!-- Shadows and Glows -->
+        <filter id="quantumShadow" x="-30%" y="-30%" width="160%" height="160%">
+            <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#7013FA" flood-opacity="0.15"/>
+        </filter>
+        <filter id="quantumGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feFlood flood-color="#7013FA" flood-opacity="0.4" result="glow" />
+            <feComposite in="glow" in2="blur" operator="in" result="coloredBlur" />
+            <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+        </filter>
+        <filter id="tealGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
+            <feFlood flood-color="#05D5C8" flood-opacity="0.4" result="glow" />
+            <feComposite in="glow" in2="blur" operator="in" result="coloredBlur" />
+            <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+        </filter>
+    </defs>
+    
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Gradient Background -->
+        <rect width="1000" height="600" fill="#F8F9FE" />
+        
+        <!-- Abstract Neural Network Pattern -->
+        <g opacity="0.06">
+            <path d="M0,100 C150,50 300,150 450,80 C600,10 750,120 900,60 C950,40 975,60 1000,50 L1000,600 L0,600 Z" fill="url(#quantumPurpleGradient)" />
+            <path d="M0,200 C100,180 200,250 300,200 C400,150 500,220 600,180 C700,140 800,200 900,150 C950,130 975,140 1000,130 L1000,600 L0,600 Z" fill="url(#quantumTealGradient)" opacity="0.7" />
+        </g>
+        
+        <!-- Hexagonal Grid Pattern -->
+        <g opacity="0.05" stroke="#7013FA" stroke-width="0.5">
+            <!-- Horizontal lines -->
+            <path d="M0,50 L1000,50 M0,150 L1000,150 M0,250 L1000,250 M0,350 L1000,350 M0,450 L1000,450 M0,550 L1000,550" />
+            <!-- Vertical lines -->
+            <path d="M50,0 L50,600 M150,0 L150,600 M250,0 L250,600 M350,0 L350,600 M450,0 L450,600 M550,0 L550,600 M650,0 L650,600 M750,0 L750,600 M850,0 L850,600 M950,0 L950,600" />
+            <!-- Diagonal lines -->
+            <path d="M0,0 L1000,600 M200,0 L1000,480 M400,0 L1000,360 M600,0 L1000,240 M800,0 L1000,120 M0,120 L880,600 M0,240 L680,600 M0,360 L480,600 M0,480 L280,600" opacity="0.3" />
+        </g>
+        
+        <!-- API Gateway -->
+        <rect x="450" y="50" width="120" height="80" rx="15" fill="url(#quantumPurpleGradient)" filter="url(#quantumGlow)" />
+        <text font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" x="510" y="95" text-anchor="middle">API Gateway</text>
+        
+        <!-- Core Services Box -->
+        <rect x="250" y="180" width="520" height="120" rx="20" fill="#FFFFFF" stroke="url(#quantumPurpleGradient)" stroke-width="2.5" filter="url(#quantumShadow)" />
+        <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#7013FA" x="510" y="210" text-anchor="middle">Core Services</text>
+        
+        <!-- Core Components -->
+        <rect x="300" y="230" width="100" height="50" rx="12" fill="url(#quantumPurpleGradient)" filter="url(#quantumGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="350" y="260" text-anchor="middle">Task Scheduler</text>
+        
+        <rect x="450" y="230" width="100" height="50" rx="12" fill="url(#quantumPurpleGradient)" filter="url(#quantumGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="500" y="260" text-anchor="middle">Agent Registry</text>
+        
+        <rect x="600" y="230" width="100" height="50" rx="12" fill="url(#quantumPurpleGradient)" filter="url(#quantumGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="650" y="260" text-anchor="middle">User Service</text>
+        
+        <!-- Agent Layer Box -->
+        <rect x="200" y="370" width="620" height="150" rx="20" fill="#FFFFFF" stroke="url(#quantumTealGradient)" stroke-width="2.5" filter="url(#quantumShadow)" />
+        <text font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#05D5C8" x="510" y="400" text-anchor="middle">Agent Layer</text>
+        
+        <!-- Agent Circles -->
+        <circle cx="280" cy="450" r="30" fill="url(#quantumTealGradient)" filter="url(#tealGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="280" y="455" text-anchor="middle">Agent</text>
+        
+        <circle cx="380" cy="450" r="30" fill="url(#quantumTealGradient)" filter="url(#tealGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="380" y="455" text-anchor="middle">Agent</text>
+        
+        <circle cx="480" cy="450" r="30" fill="url(#quantumTealGradient)" filter="url(#tealGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="480" y="455" text-anchor="middle">Agent</text>
+        
+        <circle cx="580" cy="450" r="30" fill="url(#quantumTealGradient)" filter="url(#tealGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="580" y="455" text-anchor="middle">Agent</text>
+        
+        <circle cx="680" cy="450" r="30" fill="url(#quantumTealGradient)" filter="url(#tealGlow)" />
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" x="680" y="455" text-anchor="middle">Agent</text>
+        
+        <!-- Connection Lines -->
+        <!-- API Gateway to Core Services -->
+        <path d="M510,130 L510,180" stroke="#7013FA" stroke-width="2.5" stroke-dasharray="5,5" class="connection-line" />
+        
+        <!-- Core Services to Agent Layer -->
+        <path d="M350,280 L350,330 L280,330 L280,420" stroke="#7013FA" stroke-width="2" class="connection-line" />
+        <path d="M350,280 L350,330 L380,330 L380,420" stroke="#7013FA" stroke-width="2" class="connection-line" />
+        <path d="M500,280 L500,330 L480,330 L480,420" stroke="#7013FA" stroke-width="2" class="connection-line" />
+        <path d="M500,280 L500,330 L580,330 L580,420" stroke="#7013FA" stroke-width="2" class="connection-line" />
+        <path d="M650,280 L650,330 L680,330 L680,420" stroke="#7013FA" stroke-width="2" class="connection-line" />
+        
+        <!-- Agent Connections -->
+        <path d="M310,450 C330,430 360,430 380,450" stroke="#05D5C8" stroke-width="2" stroke-dasharray="4,4" class="agent-connection" />
+        <path d="M410,450 C430,430 460,430 480,450" stroke="#05D5C8" stroke-width="2" stroke-dasharray="4,4" class="agent-connection" />
+        <path d="M510,450 C530,430 560,430 580,450" stroke="#05D5C8" stroke-width="2" stroke-dasharray="4,4" class="agent-connection" />
+        <path d="M610,450 C630,430 660,430 680,450" stroke="#05D5C8" stroke-width="2" stroke-dasharray="4,4" class="agent-connection" />
+        
+        <!-- Data Flow Animation -->
+        <!-- API to Core -->
+        <circle cx="510" cy="130" r="4" fill="#FFFFFF" class="data-point">
+            <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+            <animateMotion path="M0,0 L0,50" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Core to Agents -->
+        <circle cx="350" cy="280" r="4" fill="#FFFFFF" class="data-point">
+            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+            <animateMotion path="M0,0 L-70,140" dur="2.5s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="350" cy="280" r="4" fill="#FFFFFF" class="data-point">
+            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite" begin="1s"/>
+            <animateMotion path="M0,0 L30,140" dur="3s" repeatCount="indefinite" begin="1s"/>
+        </circle>
+        
+        <circle cx="500" cy="280" r="4" fill="#FFFFFF" class="data-point">
+            <animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite"/>
+            <animateMotion path="M0,0 L-20,140" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="500" cy="280" r="4" fill="#FFFFFF" class="data-point">
+            <animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite" begin="0.5s"/>
+            <animateMotion path="M0,0 L80,140" dur="3.2s" repeatCount="indefinite" begin="0.5s"/>
+        </circle>
+        
+        <circle cx="650" cy="280" r="4" fill="#FFFFFF" class="data-point">
+            <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+            <animateMotion path="M0,0 L30,140" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Quantum Particle Effects -->
+        <g opacity="0.8">
+            <!-- Around API Gateway -->
+            <circle cx="510" cy="90" r="3" fill="#FFFFFF">
+                <animate attributeName="r" values="3;5;3" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C10,10 20,-10 0,0" dur="5s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="520" cy="75" r="2" fill="#FFFFFF">
+                <animate attributeName="r" values="2;4;2" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C-15,5 15,15 0,0" dur="7s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Around Core Services -->
+            <circle cx="350" cy="260" r="3" fill="#FFFFFF">
+                <animate attributeName="r" values="2;4;2" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="5s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C-10,10 10,10 0,0" dur="6s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="500" cy="245" r="2" fill="#FFFFFF">
+                <animate attributeName="r" values="2;3;2" dur="3.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.5s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C15,-5 -15,15 0,0" dur="8s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="650" cy="255" r="2.5" fill="#FFFFFF">
+                <animate attributeName="r" values="2.5;4.5;2.5" dur="4.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4.5s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C-10,-10 10,-15 0,0" dur="7s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Around Agents -->
+            <circle cx="280" cy="450" r="2" fill="#FFFFFF">
+                <animate attributeName="r" values="2;4;2" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C10,10 -10,10 0,0" dur="6s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="380" cy="450" r="2.5" fill="#FFFFFF">
+                <animate attributeName="r" values="2.5;4.5;2.5" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="5s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C-15,10 15,15 0,0" dur="8s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="480" cy="450" r="3" fill="#FFFFFF">
+                <animate attributeName="r" values="3;5;3" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="6s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C10,-10 -10,15 0,0" dur="7s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="580" cy="450" r="2" fill="#FFFFFF">
+                <animate attributeName="r" values="2;4;2" dur="3.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.5s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C-10,-10 10,-10 0,0" dur="5s" repeatCount="indefinite"/>
+            </circle>
+            
+            <circle cx="680" cy="450" r="2.5" fill="#FFFFFF">
+                <animate attributeName="r" values="2.5;4.5;2.5" dur="4.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4.5s" repeatCount="indefinite"/>
+                <animateMotion path="M0,0 C10,15 -10,-15 0,0" dur="9s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        
+        <!-- Platform Glow Effects -->
+        <circle cx="510" cy="90" r="50" fill="url(#quantumPurpleGradient)" opacity="0.1">
+            <animate attributeName="r" values="50;60;50" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.1;0.15;0.1" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="510" cy="240" r="150" fill="url(#quantumPurpleGradient)" opacity="0.05">
+            <animate attributeName="r" values="150;160;150" dur="6s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.05;0.08;0.05" dur="6s" repeatCount="indefinite"/>
+        </circle>
+        
+        <circle cx="510" cy="450" r="200" fill="url(#quantumTealGradient)" opacity="0.05">
+            <animate attributeName="r" values="200;215;200" dur="8s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.05;0.07;0.05" dur="8s" repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- QuantumLayer Logo Watermark -->
+        <text font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7013FA" opacity="0.1" x="500" y="570" text-anchor="middle">QuantumLayer Platform Architecture</text>
+    </g>
+</svg>
