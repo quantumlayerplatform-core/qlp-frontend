@@ -425,21 +425,21 @@ const EnhancedArchDiagram = () => {
       </div>
       
       {/* Interactive guide marker - different for touch vs non-touch */}
-      <div className="absolute bottom-4 right-4 text-xs text-gray-400 flex items-center bg-[#13103a]/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-700/50">
+      <div className="absolute bottom-4 right-4 text-xs text-glass-light flex items-center bg-[#13103a]/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-glass-white/30">
         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div>
         <span>{isTouch ? 'Tap components to explore' : 'Hover over components to explore'}</span>
       </div>
       
       {/* Keyboard accessibility guide (only shown when in keyboard mode) */}
       {keyboardMode && (
-        <div className="absolute top-4 right-4 text-xs text-gray-400 bg-[#13103a]/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-gray-700/50">
+        <div className="absolute top-4 right-4 text-xs text-glass-light bg-[#13103a]/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-glass-white/30">
           Press Enter to view details, Escape to close
         </div>
       )}
       
       {/* Glow effects */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-600 opacity-5 filter blur-[80px]"></div>
-      <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-cyan-400 opacity-5 filter blur-[100px]"></div>
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-600 opacity-20 filter blur-[80px]"></div>
+      <div className="absolute bottom-1/3 right-1/4 w-80 h-80 rounded-full bg-cyan-400 opacity-20 filter blur-[100px]"></div>
     </div>
   );
 };
@@ -593,7 +593,7 @@ className="font-medium text-white mb-1"
 >
 {data.title}
 </h4>
-<p className="text-xs text-gray-300">{data.description}</p>
+<p className="text-xs text-glass-light">{data.description}</p>
 </div>,
 document.body
 );

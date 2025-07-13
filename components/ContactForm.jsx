@@ -51,7 +51,7 @@ const ContactForm = () => {
     setError('');
     
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/waitlist', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

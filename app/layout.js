@@ -64,8 +64,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${quantumDisplay.variable} ${quantumText.variable}`}>
-      <body>
+    <html lang="en" className={`${quantumDisplay.variable} ${quantumText.variable} ${sora.variable}`}>
+      <body className={sora.className}>
         <div className="page-container">
           {children}
         </div>

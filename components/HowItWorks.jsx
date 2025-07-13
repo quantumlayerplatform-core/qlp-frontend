@@ -57,9 +57,9 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-16 bg-gray-950 text-white">
       <h2 className="text-3xl font-bold text-center mb-10">How It Works</h2>
-      <ol className="space-y-6 max-w-3xl mx-auto text-lg text-gray-300 list-decimal list-inside px-4">
+      <ol className="space-y-6 max-w-3xl mx-auto text-lg text-glass-light list-decimal list-inside px-4">
         {steps.map((step) => (
-          <li key={step.number} className="process-step p-4 rounded-lg bg-gray-900 bg-opacity-50">
+          <li key={step.number} className="process-step p-4 rounded-lg bg-glass-dark bg-opacity-50">
             <div className="ml-2">
               <h3 className="text-xl font-semibold inline-block">{step.title}</h3>
               <p className="mt-2">{step.description}</p>
